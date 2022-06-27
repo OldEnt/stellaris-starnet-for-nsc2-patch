@@ -21,9 +21,6 @@ ship_section_template = {
 	
 	medium_utility_slots = 4
 	
-	ai_weight = {
-		factor = 500
-	}
 	resources = {
 		category = ship_sections
 		cost = { alloys = @cost0 }
@@ -159,8 +156,8 @@ ship_section_template = {
 	}
 	
 	component_slot = {
-		name = "TORPEDO_01"
-		template = "medium_missile_turret"
+		name = "MEDIUM_GUN_01"
+		template = "medium_turret"
 		locatorname = "medium_gun_01"
 	}
 	
@@ -253,9 +250,6 @@ ship_section_template = {
 	
 	medium_utility_slots = 4
 	
-	ai_weight = {
-		factor = 500
-	}
 	resources = {
 		category = ship_sections
 		cost = { alloys = @cost0 }
@@ -405,9 +399,6 @@ ship_section_template = {
 	
 	aux_utility_slots = 2
 		
-	ai_weight = {
-		factor = 500
-	}
 	resources = {
 		category = ship_sections
 		cost = { alloys = @cost0 }
