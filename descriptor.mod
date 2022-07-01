@@ -10,6 +10,7 @@ tags={
 }
 dependencies={
 	"~ Starnet AI"
+	"StarTech AI"
 	"(-NSC2 Season 6-)"
 }
 name="! Starnet for NSC2"
