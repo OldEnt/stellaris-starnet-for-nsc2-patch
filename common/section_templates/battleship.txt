@@ -42,6 +42,40 @@ ship_section_template = {
 		category = ship_sections
 		cost = { alloys = @cost5 }
 	}
+
+	ai_weight = {
+		weight = 0
+		modifier = {
+			add = 10000
+			OR = {
+				has_global_flag = str_nsc2_patch_global_unlocked_XL_battleship	# Debug, locked on default until StarNet rare resource production is bumped up.
+				has_country_flag = str_nsc2_patch_country_unlocked_XL_battleship	# Debug, locked on default until StarNet rare resource production is bumped up.
+			}
+			NOR = {
+				and = {
+					has_technology = tech_mass_accelerator_1
+					resource_stockpile_compare = {
+						resource = volatile_motes
+						value > 50
+					}
+				}
+				and = {
+					has_technology = tech_energy_lance_1
+					resource_stockpile_compare = {
+						resource = rare_crystals
+						value > 50
+					}
+				}
+				and = {
+					has_technology = tech_arc_emitter_1
+					resource_stockpile_compare = {
+						resource = rare_crystals
+						value > 50
+					}
+				}
+			}
+		}
+	}
 }
 
 
@@ -68,14 +102,37 @@ ship_section_template = {
 	}
 	
 	ai_weight = {
+		weight = 0
 		modifier = {
-			factor = 10.0
-			NOT = { is_preferred_weapons = weapon_type_explosive }
+			add = 10000
+			OR = {
+				has_global_flag = str_nsc2_patch_global_unlocked_XL_battleship	# Debug, locked on default until StarNet rare resource production is bumped up.
+				has_country_flag = str_nsc2_patch_country_unlocked_XL_battleship	# Debug, locked on default until StarNet rare resource production is bumped up.
+			}
+			NOR = {
+				and = {
+					has_technology = tech_mass_accelerator_1
+					resource_stockpile_compare = {
+						resource = volatile_motes
+						value > 50
+					}
+				}
+				and = {
+					has_technology = tech_energy_lance_1
+					resource_stockpile_compare = {
+						resource = rare_crystals
+						value > 50
+					}
+				}
+				and = {
+					has_technology = tech_arc_emitter_1
+					resource_stockpile_compare = {
+						resource = rare_crystals
+						value > 50
+					}
+				}
+			}
 		}
-		modifier = {
-			factor = 0.1
-			is_preferred_weapons = weapon_type_explosive
-		}		
 	}
 }
 
@@ -171,6 +228,10 @@ ship_section_template = {
 		category = ship_sections
 		cost = { alloys = @cost3 }
 	}
+
+	ai_weight = {
+		weight = 0
+	}
 }
 
 
@@ -238,6 +299,10 @@ ship_section_template = {
 	resources = {
 		category = ship_sections
 		cost = { alloys = @cost4 }
+	}
+
+	ai_weight = {
+		weight = 5000
 	}
 }
 
@@ -322,6 +387,10 @@ ship_section_template = {
 	resources = {
 		category = ship_sections
 		cost = { alloys = @cost2 }
+	}
+
+	ai_weight = {
+		weight = 0
 	}
 }
 
@@ -439,6 +508,10 @@ ship_section_template = {
 	resources = {
 		category = ship_sections
 		cost = { alloys = @cost3 }
+	}
+
+	ai_weight = {
+		weight = 0
 	}
 }
 
@@ -559,6 +632,10 @@ ship_section_template = {
 		category = ship_sections
 		cost = { alloys = @cost6 }
 	}
+
+	ai_weight = {
+		weight = 0
+	}
 }
 
 
@@ -632,6 +709,10 @@ ship_section_template = {
 		category = ship_sections
 		cost = { alloys = @cost3 }
 	}
+
+	ai_weight = {
+		weight = 0
+	}
 }
 
 
@@ -699,6 +780,10 @@ ship_section_template = {
 	resources = {
 		category = ship_sections
 		cost = { alloys = @cost4 }
+	}
+
+	ai_weight = {
+		weight = 5000
 	}
 }
 
@@ -777,6 +862,10 @@ ship_section_template = {
 	resources = {
 		category = ship_sections
 		cost = { alloys = @cost3 }
+	}
+
+	ai_weight = {
+		weight = 0
 	}
 }
 
@@ -860,6 +949,10 @@ ship_section_template = {
 	resources = {
 		category = ship_sections
 		cost = { alloys = @cost2 }
+	}
+
+	ai_weight = {
+		weight = 0
 	}
 }
 
@@ -996,6 +1089,10 @@ ship_section_template = {
 		category = ship_sections
 		cost = { alloys = @cost6 }
 	}
+
+	ai_weight = {
+		weight = 0
+	}
 }
 
 
@@ -1048,6 +1145,10 @@ ship_section_template = {
 	resources = {
 		category = ship_sections
 		cost = { alloys = @cost4 }
+	}
+
+	ai_weight = {
+		weight = 5000
 	}
 }
 
@@ -1117,6 +1218,10 @@ ship_section_template = {
 	resources = {
 		category = ship_sections
 		cost = { alloys = @cost3 }
+	}
+
+	ai_weight = {
+		weight = 0
 	}
 }
 
@@ -1216,6 +1321,10 @@ ship_section_template = {
 		category = ship_sections
 		cost = { alloys = @cost4 }
 	}
+
+	ai_weight = {
+		weight = 0
+	}
 }
 
 
@@ -1305,6 +1414,10 @@ ship_section_template = {
 		category = ship_sections
 		cost = { alloys = @cost1 }
 	}
+
+	ai_weight = {
+		weight = 0
+	}
 }
 
 
@@ -1386,6 +1499,10 @@ ship_section_template = {
 		category = ship_sections
 		cost = { alloys = @cost6 }
 	}
+
+	ai_weight = {
+		weight = 0
+	}
 }
 
 
@@ -1437,6 +1554,10 @@ ship_section_template = {
 	resources = {
 		category = ship_sections
 		cost = { alloys = 80 }
+	}
+
+	ai_weight = {
+		weight = 0
 	}
 }
 

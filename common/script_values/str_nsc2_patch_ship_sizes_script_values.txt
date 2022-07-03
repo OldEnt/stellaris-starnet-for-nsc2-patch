@@ -1,0 +1,302 @@
+str_nsc2_patch_value_ai_ship_data_corvette = {
+	base = 100
+	modifier = {
+		add = -50		#50
+		has_technology = tech_destroyers
+	}
+	modifier = {
+		add = -25		#25
+		has_technology = tech_cruisers
+	}
+	modifier = {
+		add = -15		#10
+		has_technology = tech_battleships
+	}
+	modifier = {
+		add = -5		#5
+		has_technology = tech_Dreadnought_1
+	}
+	# Use dreadnought fleets if Mixed Fleet is not present.
+	modifier = {
+		set = 0
+		has_technology = tech_Dreadnought_1
+		NOT = {
+			is_variable_set = str_var_ai_ship_data_factor_corvette
+		}
+		str_is_mixed_fleet_loaded = no
+	}
+	# Below modifiers always have to be at the bottom.
+	modifier = {
+		set = 0
+		uses_standard_ship_sizes = no
+	}
+	modifier = {
+		set = str_var_ai_ship_data_factor_corvette
+		is_variable_set = str_var_ai_ship_data_factor_corvette
+	}
+}
+
+str_nsc2_patch_value_ai_ship_data_destroyer = {
+	base = 0
+	modifier = {
+		add = 50		#50
+		has_technology = tech_destroyers
+	}
+	modifier = {
+		add = -25		#25
+		has_technology = tech_cruisers
+	}
+	modifier = {
+		add = -10		#15
+		has_technology = tech_battleships
+	}
+	modifier = {
+		add = -5		#10
+		has_technology = tech_Carrier_1
+	}
+	modifier = {
+		add = -5		#5
+		has_technology = tech_Dreadnought_1
+	}
+	# Use dreadnought fleets if Mixed Fleet is not present.
+	modifier = {
+		set = 0
+		has_technology = tech_Dreadnought_1
+		NOT = {
+			is_variable_set = str_var_ai_ship_data_factor_corvette
+		}
+		str_is_mixed_fleet_loaded = no
+	}
+	# Below modifiers always have to be at the bottom.
+	modifier = {
+		set = 0
+		uses_standard_ship_sizes = no
+	}
+	modifier = {
+		set = str_var_ai_ship_data_factor_destroyer
+		is_variable_set = str_var_ai_ship_data_factor_destroyer
+	}
+}
+
+str_nsc2_patch_value_ai_ship_data_cruiser = {
+	base = 0
+	modifier = {
+		add = 50		#50
+		has_technology = tech_cruisers
+	}
+	modifier = {
+		add = -10		#40
+		has_technology = tech_StrikeCruiser_1
+	}
+	modifier = {
+		add = -20		#20
+		has_technology = tech_Battlecruiser_1
+	}
+	modifier = {
+		add = -10		#10
+		has_technology = tech_Carrier_1
+	}
+	# Use dreadnought fleets if Mixed Fleet is not present.
+	modifier = {
+		set = 0
+		has_technology = tech_Dreadnought_1
+		NOT = {
+			is_variable_set = str_var_ai_ship_data_factor_corvette
+		}
+		str_is_mixed_fleet_loaded = no
+	}
+	# Below modifiers always have to be at the bottom.
+	modifier = {
+		set = 0
+		uses_standard_ship_sizes = no
+	}
+	modifier = {
+		set = str_var_ai_ship_data_factor_cruiser
+		is_variable_set = str_var_ai_ship_data_factor_cruiser
+	}
+}
+
+str_nsc2_patch_value_ai_ship_data_StrikeCruiser = {
+	base = 0
+	modifier = {
+		add = 10		#10
+		has_technology = tech_StrikeCruiser_1
+	}
+	# Use dreadnought fleets if Mixed Fleet is not present.
+	modifier = {
+		set = 0
+		has_technology = tech_Dreadnought_1
+		NOT = {
+			is_variable_set = str_var_ai_ship_data_factor_corvette
+		}
+		str_is_mixed_fleet_loaded = no
+	}
+	# Below modifiers always have to be at the bottom.
+	modifier = {
+		set = 0
+		uses_standard_ship_sizes = no
+	}
+	modifier = {
+		set = str_var_ai_ship_data_factor_StrikeCruiser
+		is_variable_set = str_var_ai_ship_data_factor_StrikeCruiser
+	}
+}
+
+str_nsc2_patch_value_ai_ship_data_escortcarrier = {
+	base = 0
+	modifier = {
+		add = 0
+		has_technology = tech_escortcarrier_1
+	}
+	# Use dreadnought fleets if Mixed Fleet is not present.
+	modifier = {
+		set = 0
+		has_technology = tech_Dreadnought_1
+		NOT = {
+			is_variable_set = str_var_ai_ship_data_factor_corvette
+		}
+		str_is_mixed_fleet_loaded = no
+	}
+	# Below modifiers always have to be at the bottom.
+	modifier = {
+		set = 0
+		uses_standard_ship_sizes = no
+	}
+	modifier = {
+		set = str_var_ai_ship_data_factor_escortcarrier
+		is_variable_set = str_var_ai_ship_data_factor_escortcarrier
+	}
+}
+
+str_nsc2_patch_value_ai_ship_data_Battlecruiser = {
+	base = 0
+	modifier = {
+		add = 20		#20
+		has_technology = tech_Battlecruiser_1
+	}
+	modifier = {
+		add = 5		#25
+		has_technology = tech_battleships
+	}
+	# Use dreadnought fleets if Mixed Fleet is not present.
+	modifier = {
+		set = 0
+		has_technology = tech_Dreadnought_1
+		NOT = {
+			is_variable_set = str_var_ai_ship_data_factor_corvette
+		}
+		str_is_mixed_fleet_loaded = no
+	}
+	# Below modifiers always have to be at the bottom.
+	modifier = {
+		set = 0
+		uses_standard_ship_sizes = no
+	}
+	modifier = {
+		set = str_var_ai_ship_data_factor_Battlecruiser
+		is_variable_set = str_var_ai_ship_data_factor_Battlecruiser
+	}
+}
+
+str_nsc2_patch_value_ai_ship_data_battleship = {
+	base = 0
+	modifier = {
+		add = 20		#20
+		has_technology = tech_battleships
+	}
+	modifier = {
+		add = 5		#25
+		has_technology = tech_Carrier_1
+	}
+	modifier = {
+		add = -5		#20
+		has_technology = tech_titans
+	}
+	# Use dreadnought fleets if Mixed Fleet is not present.
+	modifier = {
+		set = 0
+		has_technology = tech_Dreadnought_1
+		NOT = {
+			is_variable_set = str_var_ai_ship_data_factor_corvette
+		}
+		str_is_mixed_fleet_loaded = no
+	}
+	# Below modifiers always have to be at the bottom.
+	modifier = {
+		set = 0
+		uses_standard_ship_sizes = no
+	}
+	modifier = {
+		set = str_var_ai_ship_data_factor_battleship
+		is_variable_set = str_var_ai_ship_data_factor_battleship
+	}
+}
+
+str_nsc2_patch_value_ai_ship_data_Carrier = {
+	base = 0
+	modifier = {
+		add = 10		#10
+		has_technology = tech_Carrier_1
+	}
+	# Use dreadnought fleets if Mixed Fleet is not present.
+	modifier = {
+		set = 0
+		has_technology = tech_Dreadnought_1
+		NOT = {
+			is_variable_set = str_var_ai_ship_data_factor_corvette
+		}
+		str_is_mixed_fleet_loaded = no
+	}
+	# Below modifiers always have to be at the bottom.
+	modifier = {
+		set = 0
+		uses_standard_ship_sizes = no
+	}
+	modifier = {
+		set = str_var_ai_ship_data_factor_Carrier
+		is_variable_set = str_var_ai_ship_data_factor_Carrier
+	}
+}
+
+str_nsc2_patch_value_ai_ship_data_Dreadnought = {
+	base = 0
+	modifier = {
+		add = 10		#10
+		has_technology = tech_Dreadnought_1
+	}
+	# Use dreadnought fleets if Mixed Fleet is not present.
+	modifier = {
+		add = 80
+		has_technology = tech_Dreadnought_1
+		NOT = {
+			is_variable_set = str_var_ai_ship_data_factor_corvette
+		}
+		str_is_mixed_fleet_loaded = no
+	}
+	# Below modifiers always have to be at the bottom.
+	modifier = {
+		set = 0
+		uses_standard_ship_sizes = no
+	}
+	modifier = {
+		set = str_var_ai_ship_data_factor_Dreadnought
+		is_variable_set = str_var_ai_ship_data_factor_Dreadnought
+	}
+}
+
+str_nsc2_patch_value_ai_ship_data_titan = {
+	base = 0
+	modifier = {
+		add = 5		#5
+		has_technology = tech_titans
+	}
+	# Below modifiers always have to be at the bottom.
+	modifier = {
+		set = 0
+		uses_standard_ship_sizes = no
+	}
+	modifier = {
+		set = str_var_ai_ship_data_factor_titan
+		is_variable_set = str_var_ai_ship_data_factor_titan
+	}
+}

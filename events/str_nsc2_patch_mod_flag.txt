@@ -1,0 +1,11 @@
+# Compatibility flag. Used to tell other mods that StarNet for NSC2 was installed.
+namespace = str_nsc2_patch_mod_flag
+event = {
+	id = str_nsc2_patch_mod_flag.1
+	hide_window = yes
+	is_triggered_only = yes
+	fire_only_once = no
+	immediate = {
+		set_global_flag = "str_nsc2_patch_flag"
+	}
+}

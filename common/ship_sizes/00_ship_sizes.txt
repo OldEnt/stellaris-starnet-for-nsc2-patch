@@ -119,26 +119,8 @@ corvette = {
 
 	ai_ship_data = {
 		fraction = {
-			base = 100
-		modifier = {
-			add = -50 #50
-			has_technology = tech_destroyers
-			}
-		modifier = {
-			add = -25 #25
-			has_technology = tech_cruisers
-			}
-		modifier = {
-			add = -15 #10
-			has_technology = tech_battleships
-			}
-		modifier = {
-			add = -5 #5
-			has_technology = tech_Dreadnought_1
-			}
-		modifier = {
-			add = -100
-			uses_standard_ship_sizes = no
+			modifier = {
+				add = value:str_nsc2_patch_value_ai_ship_data_corvette
 			}
 		}
 	}
@@ -195,32 +177,10 @@ destroyer = {
 
 	ai_ship_data = {
 		fraction = {
-					base = 0
-					modifier = {
-						add = 50 #50
-						has_technology = tech_destroyers
-						}
-					modifier = {
-						add = -25 #25
-						has_technology = tech_cruisers
-					}
-					modifier = {
-						add = -10 #15
-						has_technology = tech_battleships
-					}
-					modifier = {
-						add = -5 #10
-						has_technology = tech_Carrier_1
-					}
-					modifier = {
-						add = -5 #5
-						has_technology = tech_Dreadnought_1
-					}
-					modifier = {
-						add = -100
-						uses_standard_ship_sizes = no
-					}
-				}
+			modifier = {
+				add = value:str_nsc2_patch_value_ai_ship_data_destroyer
+			}
+		}
 	}
 
 	required_component_set = "power_core"
@@ -275,26 +235,8 @@ cruiser = {
 
 	ai_ship_data = {
 		fraction = {
-			base = 0
 			modifier = {
-				add = 50 #50
-				has_technology = tech_cruisers
-			}
-			modifier = {
-				add = -10 #40
-				has_technology = tech_StrikeCruiser_1
-			}
-			modifier = {
-				add = -20 #20
-				has_technology = tech_Battlecruiser_1
-			}
-			modifier = {
-				add = -10 #10
-				has_technology = tech_Carrier_1
-			}
-			modifier = {
-				add = -100
-				uses_standard_ship_sizes = no
+				add = value:str_nsc2_patch_value_ai_ship_data_cruiser
 			}
 		}
 	}
@@ -352,14 +294,8 @@ StrikeCruiser = {
 
 	ai_ship_data = {
 		fraction = {
-			base = 0
 			modifier = {
-				add = 10 #10
-				has_technology = tech_StrikeCruiser_1
-			}
-			modifier = {
-				add = -100
-				uses_standard_ship_sizes = no
+				add = value:str_nsc2_patch_value_ai_ship_data_StrikeCruiser
 			}
 		}
 	}
@@ -418,14 +354,8 @@ escortcarrier = {
 
 	ai_ship_data = {
 		fraction = {
-			base = 0
 			modifier = {
-				add = 0
-				has_technology = tech_escortcarrier_1
-			}
-			modifier = {
-				add = -100
-				uses_standard_ship_sizes = no
+				add = value:str_nsc2_patch_value_ai_ship_data_escortcarrier
 			}
 		}
 	}
@@ -483,20 +413,10 @@ Battlecruiser = {
 
 	ai_ship_data = {
 		fraction = {
-			base = 0
 			modifier = {
-				add = 20 #20
-				has_technology = tech_Battlecruiser_1
+				add = value:str_nsc2_patch_value_ai_ship_data_Battlecruiser
 			}
-					modifier = {
-						add = 5 #25
-						has_technology = tech_battleships
-					}
-					modifier = {
-						add = -100
-						uses_standard_ship_sizes = no
-					}
-				}
+		}
 	}
 
 	required_component_set = "power_core"
@@ -551,24 +471,10 @@ battleship = {
 
 	ai_ship_data = {
 		fraction = {
-					base = 0
-					modifier = {
-						add = 20 #20
-						has_technology = tech_battleships
-						}
-					modifier = {
-						add = 5 #25
-						has_technology = tech_Carrier_1
-					}
-					modifier = {
-						add = -5 #20
-						has_technology = tech_titans
-					}
-					modifier = {
-						add = -100
-						uses_standard_ship_sizes = no
-					}
-				}
+			modifier = {
+				add = value:str_nsc2_patch_value_ai_ship_data_battleship
+			}
+		}
 	}
 
 	required_component_set = "power_core"
@@ -626,16 +532,10 @@ Carrier = {
 
 	ai_ship_data = {
 		fraction = {
-					base = 0
-					modifier = {
-						add = 10 #10
-						has_technology = tech_Carrier_1
-						}
-						modifier = {
-							add = -100
-							uses_standard_ship_sizes = no
-						}
-				}
+			modifier = {
+				add = value:str_nsc2_patch_value_ai_ship_data_Carrier
+			}
+		}
 	}
 
 	required_component_set = "power_core"
@@ -693,16 +593,10 @@ Dreadnought = {
 
 	ai_ship_data = {
 		fraction = {
-					base = 0
-					modifier = {
-						add = 10 #10
-						has_technology = tech_Dreadnought_1
-						}
-						modifier = {
-							add = -100
-							uses_standard_ship_sizes = no
-						}
-				}
+			modifier = {
+				add = value:str_nsc2_patch_value_ai_ship_data_Dreadnought
+			}
+		}
 	}
 
 	required_component_set = "power_core"
@@ -809,16 +703,10 @@ titan = {
 		min = 1
 		max = 99
 		fraction = {
-					base = 0
-					modifier = {
-						add = 5 #5
-						has_technology = tech_titans
-					}
-					modifier = {
-						add = -100
-						uses_standard_ship_sizes = no
-					}
-				}
+			modifier = {
+				add = value:str_nsc2_patch_value_ai_ship_data_titan
+			}
+		}
 	}
 
 	required_component_set = "power_core"

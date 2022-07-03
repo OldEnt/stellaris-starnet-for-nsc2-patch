@@ -34,17 +34,19 @@ ship_section_template = {
 	
 	ai_weight = {
 		modifier = {
-			factor = 0.1		
-			NOT = { has_technology = tech_battleships }
+			factor = 0.8
 		}
 		modifier = {
-			factor = 10.0
-			is_preferred_weapons = weapon_type_explosive
+			factor = 100
+			has_technology = tech_lasers_4
 		}
 		modifier = {
-			factor = 0.1
-			NOT = { is_preferred_weapons = weapon_type_explosive }
-		}	
+			factor = 100
+			or = {
+				has_technology = tech_energy_torpedoes_1
+				has_global_flag = iss_mod_active
+			}
+		}
 	}
 }
 
@@ -82,7 +84,7 @@ ship_section_template = {
 	ai_weight = {
 		modifier = {
 			factor = 10.0
-			NOR = {
+			OR = {
 				has_ai_personality = peaceful_traders
 				has_ai_personality = slaving_despots
 				has_ai_personality = migrating_flock
@@ -130,17 +132,16 @@ ship_section_template = {
 	}
 	
 	ai_weight = {
+		factor = 0
 		modifier = {
 			factor = 10.0
-			is_preferred_weapons = weapon_type_explosive
-		}
-		modifier = {
-			factor = 0.1		
-			has_technology = tech_battleships
-		}		
-		modifier = {
-			factor = 0.1
-			NOT = { is_preferred_weapons = weapon_type_explosive }
+			NOR = {
+				has_ai_personality = peaceful_traders
+				has_ai_personality = slaving_despots
+				has_ai_personality = migrating_flock
+				has_ai_personality = evangelising_zealots
+				has_ai_personality = hive_mind
+			}
 		}
 	}
 }
@@ -245,7 +246,13 @@ ship_section_template = {
 		cost = { alloys = @cost0 }
 	}
 	
-	ai_weight = { factor = 100 }
+	ai_weight = {
+		factor = 100
+		modifier = {
+			factor = 2
+			has_technology = tech_autocannons_2
+		}
+	}
 }
 
 ship_section_template = {
@@ -261,7 +268,14 @@ ship_section_template = {
 		template = "medium_turret"
 		locatorname = "medium_gun_01"
 	}
-	
+
+	ai_weight = {
+		modifier = {
+			factor = 1000
+			has_global_flag = iss_mod_active
+		}
+	}
+
 	aux_utility_slots = 1
 	
 	resources = {
@@ -306,19 +320,6 @@ ship_section_template = {
 		category = ship_sections
 		cost = { alloys = @cost1 }
 	}
-	
-	ai_weight = {
-		modifier = {
-			factor = 10.0
-			NOR = {
-				has_ai_personality = peaceful_traders
-				has_ai_personality = slaving_despots
-				has_ai_personality = migrating_flock
-				has_ai_personality = evangelising_zealots
-				has_ai_personality = hive_mind
-			}
-		}
-	}
 }
 
 ship_section_template = {
@@ -350,16 +351,7 @@ ship_section_template = {
 	}
 	
 	ai_weight = {
-		modifier = {
-			factor = 10.0
-			NOR = {
-				has_ai_personality = peaceful_traders
-				has_ai_personality = slaving_despots
-				has_ai_personality = migrating_flock
-				has_ai_personality = evangelising_zealots
-				has_ai_personality = hive_mind
-			}
-		}
+		factor = 100
 	}
 }
 
