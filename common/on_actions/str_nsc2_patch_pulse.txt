@@ -1,11 +1,13 @@
 on_game_start = {
 	events = {
 		str_nsc2_patch_mod_flag.1		# Sets this mod's global flag so that other modders can check if the mod is installed. To see if patch is overwriting StarNet properly check @str_is_nsc2_patch_loaded scripted variable.
+		str_nsc2_patch_events.200		# Register ship_size for fleet composition settings.
 	}
 }
 
 on_single_player_save_game_load = {
 	events = {
 		str_nsc2_patch_mod_flag.1
+		str_nsc2_patch_events.200		# Register ship_size for fleet composition settings.
 	}
 }

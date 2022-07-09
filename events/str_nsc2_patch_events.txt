@@ -1,0 +1,10 @@
+namespace = str_nsc2_patch_events
+# Register ship_size for fleet composition settings.
+event = {
+	id = str_nsc2_patch_events.200
+	hide_window = yes
+	is_triggered_only = yes
+	immediate = {
+		str_on_game_start_register_nsc2_ship_sizes = yes
+	}
+}
