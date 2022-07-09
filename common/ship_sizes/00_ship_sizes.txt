@@ -120,7 +120,7 @@ corvette = {
 	ai_ship_data = {
 		fraction = {
 			modifier = {
-				add = value:str_nsc2_patch_value_ai_ship_data_corvette
+				add = value:str_value_ai_ship_data_corvette
 			}
 		}
 	}
@@ -178,7 +178,7 @@ destroyer = {
 	ai_ship_data = {
 		fraction = {
 			modifier = {
-				add = value:str_nsc2_patch_value_ai_ship_data_destroyer
+				add = value:str_value_ai_ship_data_destroyer
 			}
 		}
 	}
@@ -236,7 +236,7 @@ cruiser = {
 	ai_ship_data = {
 		fraction = {
 			modifier = {
-				add = value:str_nsc2_patch_value_ai_ship_data_cruiser
+				add = value:str_value_ai_ship_data_cruiser
 			}
 		}
 	}
@@ -295,7 +295,7 @@ StrikeCruiser = {
 	ai_ship_data = {
 		fraction = {
 			modifier = {
-				add = value:str_nsc2_patch_value_ai_ship_data_StrikeCruiser
+				add = value:str_value_ai_ship_data_StrikeCruiser
 			}
 		}
 	}
@@ -355,7 +355,7 @@ escortcarrier = {
 	ai_ship_data = {
 		fraction = {
 			modifier = {
-				add = value:str_nsc2_patch_value_ai_ship_data_escortcarrier
+				add = value:str_value_ai_ship_data_escortcarrier
 			}
 		}
 	}
@@ -414,7 +414,7 @@ Battlecruiser = {
 	ai_ship_data = {
 		fraction = {
 			modifier = {
-				add = value:str_nsc2_patch_value_ai_ship_data_Battlecruiser
+				add = value:str_value_ai_ship_data_Battlecruiser
 			}
 		}
 	}
@@ -472,7 +472,7 @@ battleship = {
 	ai_ship_data = {
 		fraction = {
 			modifier = {
-				add = value:str_nsc2_patch_value_ai_ship_data_battleship
+				add = value:str_value_ai_ship_data_battleship
 			}
 		}
 	}
@@ -533,7 +533,7 @@ Carrier = {
 	ai_ship_data = {
 		fraction = {
 			modifier = {
-				add = value:str_nsc2_patch_value_ai_ship_data_Carrier
+				add = value:str_value_ai_ship_data_Carrier
 			}
 		}
 	}
@@ -594,7 +594,7 @@ Dreadnought = {
 	ai_ship_data = {
 		fraction = {
 			modifier = {
-				add = value:str_nsc2_patch_value_ai_ship_data_Dreadnought
+				add = value:str_value_ai_ship_data_Dreadnought
 			}
 		}
 	}
@@ -700,13 +700,9 @@ titan = {
 	min_upgrade_cost = { alloys = 16 }
 
 	ai_ship_data = {
-		min = 1
-		max = 99
-		fraction = {
-			modifier = {
-				add = value:str_nsc2_patch_value_ai_ship_data_titan
-			}
-		}
+		min = value:str_value_ai_ship_data_min_titan
+		max = value:str_value_ai_ship_data_max_titan
+		# planet_mult = value:str_value_ai_ship_data_planet_mult_titan
 	}
 
 	required_component_set = "power_core"

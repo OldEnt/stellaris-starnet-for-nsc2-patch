@@ -1,0 +1,8 @@
+str_value_limits_base_headquarters = {
+	base = 50
+	# Below modifiers always have to be at the bottom.
+	modifier = {
+		set = str_var_limits_base_headquarters
+		is_variable_set = str_var_limits_base_headquarters
+	}
+}
