@@ -33,10 +33,10 @@ str_on_game_start_register_nsc2_ship_sizes = {
 	}
 	str_register_ship_size = {
 		SHIP_SIZE = headquarters
-		MOD_NAME = vanilla
+		MOD_NAME = nsc2
 		SIZE_MULTIPLIER = 50
-		AI_SHIP_DATA_DESIRED_MIN = 1
-		AI_SHIP_DATA_DESIRED_MAX = 1
+		AI_SHIP_DATA_MIN = 1
+		AI_SHIP_DATA_MAX = 1
 		LIMITS_BASE = 50
 	}
 }
