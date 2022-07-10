@@ -11,3 +11,9 @@ on_single_player_save_game_load = {
 		str_nsc2_patch_events.200		# Register ship_size for fleet composition settings.
 	}
 }
+
+str_on_ship_size_register_export = {
+	events = {
+		str_nsc2_patch_events.200		# Export Fleet Composition from register to selected countries.
+	}
+}
