@@ -157,6 +157,12 @@ headquarters = {
 	}
 	
 	possible_construction = {
+		hidden_trigger = {
+			exists = owner
+			owner = {
+				is_ai = no	# headquarters somehow can make AI stuck and not build fleets.
+			}
+		}
 		custom_tooltip = {
 			fail_text = starbase_citadel_trigger
 			OR = {
