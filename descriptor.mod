@@ -9,7 +9,7 @@ tags={
 	"Balance"
 }
 dependencies={
-	"~ Starnet AI"
+	"~ StarNet AI"
 	"StarTech AI"
 	"(-NSC2 Season 6-)"
 }
