@@ -896,7 +896,7 @@ science = {
 	ai_ship_data = {
 		min = value:desired_science_ships
 		system_mult = value:desired_science_ships_system_mult
-		max = 5
+		max = 10
 	}
 	
 	required_component_set = "power_core"
