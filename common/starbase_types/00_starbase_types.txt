@@ -1,7 +1,20 @@
-######################
-### STARBASE TYPES ###
-######################
+#root = starbase
+#from = player
 
+# Weights in the ai_design part are multiplied with the base weight of 00_starbase_buildings.txt and 00_starbase_modules.txt
+# Then, a random number between that value and and extra 50% of that it is ADDED to it
+# F.e. 100 base weight multiplies with 2.00 = 200. Then we take a random number between 0 and 100 (50% of 200) and ADD it to 200. 235 then, for example
+# This is done for ALL starbase modules and buildings in the list every time an evaluation is made
+# And the building or module with the highest value will be chosen to being built
+# The implication of that is that you can not balance the weights TOO FAR from each other - otherwise some modules will never be chosen, unless they are the only thing on the evaluation
+# Due to the progression of the game and the unlocking of tech, though, it is often the case that there will only be 1 item on the list at any given time anyway
+
+# How the AI/game selects which type to use:
+# First of all, it will try to find one which fulfils both the potential trigger and has a positive weight_modifier
+# If this succeeds, the starbase already has a type.
+# If it fails, it will go through each starbase type that fulfils the potential trigger. Then it will check the ratio it has built (total of this type / total upgraded starbases) compared to the desired ratio. If it is set to desire a minimum value and owns less than that, it multiplies its ratio desire by * 100. Then it build according to that type's template.
+
+# Shipyard
 sshipyard = {
 	potential = {
 		has_starbase_size > starbase_outpost
@@ -39,23 +52,27 @@ sshipyard = {
 			}
 		}
 	}
-	
+
 	ai_design = {
 		min = {
 			base = 1
-			factor = 1
 		}
+
 		ratio = {
-			base = 0.25
+			base = 0.20
 			modifier = {
-				add = 0.1
+				add = 0.10
 				exists = owner
-				owner = { has_ethic = ethic_militarist }
+				owner = {
+					has_ethic = ethic_militarist
+				}
 			}
 			modifier = {
 				add = 0.05
 				exists = owner
-				owner = { has_ethic = ethic_fanatic_militarist }
+				owner = {
+					has_ethic = ethic_fanatic_militarist
+				}
 			}
 		}
 		buildings = {
@@ -100,8 +117,7 @@ sshipyard = {
 	}
 }
 
-
-
+# Anchorage
 sanchorage = {
 	potential = {
 		has_starbase_size > starbase_outpost
@@ -117,15 +133,20 @@ sanchorage = {
 			mode = add
 			mult = 100
 		}
+		modifier = {
+			add = 500
+			owner = { needs_shipyard = no }
+			not = { has_starbase_module = shipyard }
+		}
 	}
 
 	ai_design = {
 		min = {
-			base = 1
-			factor = 1
+			base = 0
 		}
+
 		ratio = {
-			base = 0.45
+			base = 0.65
 			modifier = {
 				add = 0.05
 				exists = owner
@@ -180,16 +201,12 @@ sanchorage = {
 		}
 		
 		modules = {
-			anchorage = { base = 1.0 }
-			hangar_bay = { base = 0.6 }
-			gun_battery = { base = 0.8 }
-			missile_battery = { base = 0.8 }
-			large_battery = { base = 0.8 }
-			pd_battery = { base = 0.8 }
-			xl_battery = { base = 0.8 }
-			titanic_battery = { base = 0.8 }
-			shield_module = { base = 1.0 }
-			armor_module = { base = 1.0 }
+			anchorage = {
+				base = 1.00
+			}
+			shipyard = {
+				base = 0.5
+			}
 		}
 	}
 }
@@ -217,12 +234,11 @@ strading_hub = {
 
 	ai_design = {
 		min = {
-			base = 1
-			factor = 1
+			base = 0
 		}
-		
+
 		ratio = {
-			base = 0.3
+			base = 0.15
 			modifier = {
 				add = 0.05
 				exists = owner
@@ -301,12 +317,15 @@ strading_hub = {
 sfortress = {
 	potential = {
 		has_starbase_size > starbase_outpost
+		exists = owner
 		OR = {
 			has_starbase_module = gun_battery
 			has_starbase_module = missile_battery
 			has_starbase_module = hangar_bay
 		}
 	}
+
+	ai_use_defense_platforms = yes #AI will not build defense platforms otherwise, except in the capital system
 
 	weight_modifier = {
 		base = 0
@@ -338,10 +357,16 @@ sfortress = {
 			add = 150
 			solar_system = { is_bottleneck_system = yes }
 			closest_system = {
-				max_steps = 3
+				max_steps = 2
 				limit = {
 					exists = owner
-					owner = { is_rival = root }
+					owner = {
+						OR = {
+							is_rival = root
+							is_hostile_to = root
+							is_hostile = root
+						}
+					}
 				}
 				exists = this
 			}
@@ -350,26 +375,11 @@ sfortress = {
 
 	ai_design = {
 		min = {
-			base = 1
-			factor = 1
+			base = 0
 		}
-		
+
 		ratio = {
-			base = 0.25
-			modifier = {
-				add = 0.10
-				exists = owner
-				owner = {
-					has_ethic = ethic_militarist
-				}
-			}
-			modifier = {
-				add = 0.1
-				exists = owner
-				owner = {
-					has_ethic = ethic_fanatic_militarist
-				}
-			}
+			base = 0
 		}
 
 		# token followed by priority
@@ -417,10 +427,6 @@ sfortress = {
 		}
 	}
 }
-
-
-
-
 
 # Trading Hub - Gestalts
 strading_hub_gestalt = {
@@ -558,17 +564,13 @@ sorbital_shipyard = {
 				base = 1.00
 			}
 
-			fleet_academy = {
-				base = 1.00
-			}
-
 			hydroponics_bay = {
 				base = 0.25
 			}
 		}
 
 		modules = {
-			shipyard = {
+			orbital_ring_shipyard = {
 				base = 1.00
 			}
 		}
@@ -634,7 +636,7 @@ sorbital_anchorage = {
 		}
 
 		modules = {
-			anchorage = {
+			orbital_ring_anchorage = {
 				base = 1.00
 			}
 
@@ -661,6 +663,8 @@ sorbital_fortress = {
 			has_starbase_module = orbital_ring_hangar_bay
 		}
 	}
+
+	ai_use_defense_platforms = yes #AI will not build defense platforms otherwise, except in the capital system
 
 	weight_modifier = {
 		base = 0
@@ -696,14 +700,7 @@ sorbital_fortress = {
 		}
 
 		ratio = {
-			base = 0.25
-			modifier = {
-				add = 0.15
-				exists = owner
-				owner = {
-					is_militarist = yes
-				}
-			}
+			base = 0
 		}
 
 		# token followed by priority
@@ -730,7 +727,7 @@ sorbital_fortress = {
 		}
 
 		modules = {
-			hangar_bay = {
+			orbital_ring_hangar_bay = {
 				base = 1.00
 				modifier = {
 					factor = 3
@@ -740,7 +737,7 @@ sorbital_fortress = {
 				}
 			}
 
-			missile_battery = {
+			orbital_ring_missile_battery = {
 				base = 1.00
 				modifier = {
 					factor = 3
@@ -750,7 +747,7 @@ sorbital_fortress = {
 				}
 			}
 
-			gun_battery = {
+			orbital_ring_gun_battery = {
 				base = 1.00
 				modifier = {
 					factor = 3
@@ -918,7 +915,7 @@ sorbital_habitation = {
 
 		modules = {
 			orbital_ring_habitation = {
-				base = 1.00
+				base = 20.00
 			}
 		}
 	}
