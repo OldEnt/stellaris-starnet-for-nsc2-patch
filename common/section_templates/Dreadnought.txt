@@ -689,7 +689,7 @@ ship_section_template = {
 	}
 
 	ai_weight = {
-		base = 0
+		base = 100
 	}
 }
 
