@@ -15,5 +15,5 @@ dependencies={
 }
 name="! Starnet for NSC2"
 picture="thumbnails.png"
-supported_version="3.5.*"
+supported_version="3.6.*"
 remote_file_id="1720760712"
