@@ -554,7 +554,7 @@ Carrier = {
 	use_shipnames_from = battleship
 	combat_disengage_chance = 0.80
 	
-	is_space_station = noc
+	is_space_station = no
 	can_have_federation_design = yes
 	enable_default_design = yes
 	enable_3dview_in_ship_browser = yes #if yes, ship design will have a 3d view in the ship browser
@@ -1320,6 +1320,20 @@ military_station_small = {
 		}
 	}
 
+	possible_construction = {
+		hidden_trigger = {
+			NAND = {
+				exists = owner
+				owner = {
+					is_ai = yes
+				}
+				NOT = {
+					has_global_flag = str_global_ai_should_build_starbase_defenses
+				}
+			}
+		}
+	}
+
 	resources = {
 		category = ships
 	}
@@ -1363,6 +1377,20 @@ military_station_medium = {
 
 	build_block_radius = @build_block_radius_military
 
+	possible_construction = {
+		hidden_trigger = {
+			NAND = {
+				exists = owner
+				owner = {
+					is_ai = yes
+				}
+				NOT = {
+					has_global_flag = str_global_ai_should_build_starbase_defenses
+				}
+			}
+		}
+	}
+
 	resources = {
 		category = ships
 	}
@@ -1405,6 +1433,20 @@ military_station_large = {
 
 	build_block_radius = @build_block_radius_military
 
+	possible_construction = {
+		hidden_trigger = {
+			NAND = {
+				exists = owner
+				owner = {
+					is_ai = yes
+				}
+				NOT = {
+					has_global_flag = str_global_ai_should_build_starbase_defenses
+				}
+			}
+		}
+	}
+
 	resources = {
 		category = ships
 	}
@@ -1444,6 +1486,20 @@ military_station_medium = {
 		OR = {
 			has_starbase_size >= starbase_outpost
 			has_starbase_size >= orbital_ring_tier_1
+		}
+	}
+
+	possible_construction = {
+		hidden_trigger = {
+			NAND = {
+				exists = owner
+				owner = {
+					is_ai = yes
+				}
+				NOT = {
+					has_global_flag = str_global_ai_should_build_starbase_defenses
+				}
+			}
 		}
 	}
 	
@@ -1493,6 +1549,20 @@ military_station_large = {
 		OR = {
 			has_starbase_size >= starbase_outpost
 			has_starbase_size >= orbital_ring_tier_1
+		}
+	}
+
+	possible_construction = {
+		hidden_trigger = {
+			NAND = {
+				exists = owner
+				owner = {
+					is_ai = yes
+				}
+				NOT = {
+					has_global_flag = str_global_ai_should_build_starbase_defenses
+				}
+			}
 		}
 	}
 	
