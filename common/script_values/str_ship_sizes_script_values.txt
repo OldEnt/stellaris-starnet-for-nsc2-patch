@@ -36,6 +36,33 @@ str_value_ai_ship_data_corvette = {
 	}
 }
 
+str_value_ai_ship_data_frigate = {
+	base = 0
+	modifier = {
+		add = 20
+		NOT = {
+			has_technology = tech_Dreadnought_1
+		}
+		has_technology = tech_corvettes
+		has_technology = tech_torpedoes_1
+		has_technology = tech_cruisers
+	}
+	# Override with Mixed Fleet if present.
+	modifier = {
+		set = value:str_mixed_fleet_value_ai_ship_data_frigate
+		str_is_mixed_fleet_loaded = yes
+	}
+	# Below modifiers always have to be at the bottom.
+	modifier = {
+		set = 0
+		uses_standard_ship_sizes = no
+	}
+	modifier = {
+		set = str_var_ai_ship_data_factor_frigate
+		is_variable_set = str_var_ai_ship_data_factor_frigate
+	}
+}
+
 str_value_ai_ship_data_destroyer = {
 	base = 0
 	modifier = {
