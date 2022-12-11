@@ -1355,12 +1355,7 @@ military_station_medium = {
 	max_hitpoints = @station_medium_hp
 	size_multiplier = 8
 	fleet_slot_size = 4
-	section_slots = {
-		"north" = { locator = "part1" }
-		"west" = { locator = "part2" }
-		"east" = { locator = "part3" }
-		"south" = { locator = "part4" }
-	}
+	section_slots = { "north" = { locator = "part1" } "west" = { locator = "part1" } "east" = { locator = "part2" } "south" = { locator = "part2" } }
 	num_target_locators = 0
 	is_space_station = yes
 	base_buildtime = 360
@@ -1412,12 +1407,7 @@ military_station_large = {
 	max_hitpoints = @station_large_hp
 	size_multiplier = 16
 	fleet_slot_size = 8
-	section_slots = {
-		"north" = { locator = "part1" locator = "part2" }
-		"west" = { locator = "part3" locator = "part4" }
-		"east" = { locator = "part5" locator = "part6" }
-		"south" = { locator = "part7" locator = "part8" }
-	}
+	section_slots = { "north" = { locator = "part1" } "west" = { locator = "part1" } "east" = { locator = "part2" } "south" = { locator = "part2" } }
 	num_target_locators = 0
 	is_space_station = yes
 	is_listed = no
@@ -1450,132 +1440,6 @@ military_station_large = {
 	resources = {
 		category = ships
 	}
-}
-
-military_station_medium = {
-	max_speed = @speed1
-	rotation_speed = @rotation7
-	acceleration = @acceleration7
-	
-	modifier = {
-		ship_armor_add = 2000
-		ship_evasion_mult = -1
-		ship_piracy_suppression_add = 4
-	}
-	ship_modifier = {
-		ship_weapon_range_mult = 0.20
-		ship_fire_rate_mult = 1
-	}
-	
-	max_hitpoints = 10000
-	size_multiplier = 10
-	fleet_slot_size = 10
-	section_slots = { "north" = { locator = "part1" } "west" = { locator = "part1" } "east" = { locator = "part2" } "south" = { locator = "part2" } }
-	num_target_locators = 0
-	base_buildtime = @destroyer_build_time
-	use_shipnames_from = military_station_small
-	
-	is_space_station = yes
-	enable_default_design = yes
-	is_designable = yes
-	uses_name_prefix = no
-	takes_name_from_ship_design = yes
-	
-	potential_construction = {
-		is_scope_type = starbase
-		OR = {
-			has_starbase_size >= starbase_outpost
-			has_starbase_size >= orbital_ring_tier_1
-		}
-	}
-
-	possible_construction = {
-		hidden_trigger = {
-			NAND = {
-				exists = owner
-				owner = {
-					is_ai = yes
-				}
-				NOT = {
-					has_global_flag = str_global_ai_should_build_starbase_defenses
-				}
-			}
-		}
-	}
-	
-	resources = { category = ships }
-	build_block_radius = @block_radius_military
-	
-	prerequisites = { "tech_space_defense_station_2" }
-	class = shipclass_military_station
-	construction_type = starbase_defenses
-
-	required_component_set = "power_core"
-	required_component_set = "sensor_components"
-	required_component_set = "combat_computers"	
-}
-
-military_station_large = {
-	max_speed = @speed1
-	rotation_speed = @rotation7
-	acceleration = @acceleration7
-	
-	modifier = {
-		ship_armor_add = 4000
-		ship_evasion_mult = -1
-		ship_piracy_suppression_add = 6
-	}
-	ship_modifier = {
-		ship_weapon_range_mult = 0.20
-		ship_fire_rate_mult = 1
-	}
-	
-	max_hitpoints = 20000
-	size_multiplier = 30
-	fleet_slot_size = 30
-	section_slots = { "north" = { locator = "part1" } "west" = { locator = "part1" } "east" = { locator = "part2" } "south" = { locator = "part2" } }
-	num_target_locators = 0
-	base_buildtime = @cruiser_build_time
-	use_shipnames_from = military_station_small
-	
-	is_space_station = yes
-	enable_default_design = yes
-	is_designable = yes
-	uses_name_prefix = no
-	takes_name_from_ship_design = yes
-	
-	potential_construction = {
-		is_scope_type = starbase
-		OR = {
-			has_starbase_size >= starbase_outpost
-			has_starbase_size >= orbital_ring_tier_1
-		}
-	}
-
-	possible_construction = {
-		hidden_trigger = {
-			NAND = {
-				exists = owner
-				owner = {
-					is_ai = yes
-				}
-				NOT = {
-					has_global_flag = str_global_ai_should_build_starbase_defenses
-				}
-			}
-		}
-	}
-	
-	resources = { category = ships }
-	build_block_radius = @block_radius_military
-	
-	prerequisites = { "tech_space_defense_station_3" }
-	class = shipclass_military_station
-	construction_type = starbase_defenses
-
-	required_component_set = "power_core"
-	required_component_set = "sensor_components"
-	required_component_set = "combat_computers"
 }
 
 
