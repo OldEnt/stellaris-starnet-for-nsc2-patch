@@ -514,7 +514,7 @@ ship_section_template = {
 	should_draw_components = yes
 	entity = "cruiser_bow_L1_entity"
 	icon = "GFX_ship_part_core_bow"
-	ai_tags = { artillery }
+	ai_tags = { artillery artillery_stealth }
 	
 	prerequisites = { "tech_nsc_disabled_sections" }
 
@@ -541,7 +541,7 @@ ship_section_template = {
 	should_draw_components = yes
 	entity = "cruiser_bow_M1S2_entity"
 	icon = "GFX_ship_part_core_bow"
-	ai_tags = { explosive energy_torpedoes }
+	ai_tags = { explosive explosive_stealth energy_torpedoes energy_torpedoes_stealth }
 
 	prerequisites = { tech_torpedoes_1 tech_nsc_disabled_sections }
 
@@ -591,7 +591,7 @@ ship_section_template = {
 	should_draw_components = yes
 	entity = "cruiser_bow_M2_entity"
 	icon = "GFX_ship_part_core_bow"
-	ai_tags = { gunship }
+	ai_tags = { gunship carrier }
 	
 	prerequisites = { "tech_nsc_disabled_sections" }
 
@@ -674,7 +674,7 @@ ship_section_template = {
 	should_draw_components = yes
 	entity = "cruiser_mid_L1M1_entity"
 	icon = "GFX_ship_part_core_mid"
-	ai_tags = { artillery }
+	ai_tags = { artillery artillery_stealth }
 	
 	prerequisites = { "tech_nsc_disabled_sections" }
 
@@ -745,7 +745,7 @@ ship_section_template = {
 	should_draw_components = yes
 	entity = "cruiser_mid_M2S2_entity"
 	icon = "GFX_ship_part_core_mid"
-	ai_tags = { explosive energy_torpedoes }
+	ai_tags = { explosive explosive_stealth energy_torpedoes energy_torpedoes_stealth }
 
 	prerequisites = { tech_torpedoes_1 tech_nsc_disabled_sections }
 
@@ -803,7 +803,7 @@ ship_section_template = {
 	should_draw_components = yes
 	entity = "cruiser_stern_M1_entity"
 	icon = "GFX_ship_part_core_stern"
-	ai_tags = { artillery }
+	ai_tags = { artillery artillery_stealth carrier	}
 	
 	prerequisites = { "tech_nsc_disabled_sections" }
 
@@ -830,7 +830,7 @@ ship_section_template = {
 	should_draw_components = yes
 	entity = "cruiser_stern_S2_entity"
 	icon = "GFX_ship_part_core_stern"
-	ai_tags = { gunship }
+	ai_tags = {	gunship explosive explosive_stealth energy_torpedoes energy_torpedoes_stealth }
 	
 	prerequisites = { "tech_nsc_disabled_sections" }
 

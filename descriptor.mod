@@ -1,4 +1,4 @@
-version="3.5"
+version="3.7"
 tags={
 	"Gameplay"
 	"Overhaul"
@@ -15,5 +15,5 @@ dependencies={
 }
 name="! Starnet for NSC2"
 picture="thumbnails.png"
-supported_version="3.6.*"
+supported_version="3.7.*"
 remote_file_id="1720760712"

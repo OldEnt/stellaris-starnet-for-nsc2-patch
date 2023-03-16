@@ -1,3 +1,5 @@
+# Debug effect:
+# effect set_variable = { which = str_var_ai_ship_data_factor_corvette value = 0 } set_variable = { which = str_var_ai_ship_data_factor_destroyer value = 0 } set_variable = { which = str_var_ai_ship_data_factor_cruiser value = 0 } set_variable = { which = str_var_ai_ship_data_factor_battleship value = 0 }
 str_value_ai_ship_data_corvette = {
 	base = 100
 	modifier = {

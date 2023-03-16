@@ -55,8 +55,6 @@ ship_section_template = {
 	}
 }
 
-
-
 ship_section_template = {
 	key = "BATTLECRUISER_BOW_S7M7"
 	ship_size = Battlecruiser
@@ -147,8 +145,6 @@ ship_section_template = {
 		base = 0
 	}
 }
-
-
 
 ship_section_template = {
 	key = "BATTLECRUISER_BOW_P7M7"
@@ -241,8 +237,6 @@ ship_section_template = {
 	}
 }
 
-
-
 ship_section_template = {
 	key = "BATTLECRUISER_BOW_G8"
 	ship_size = Battlecruiser
@@ -303,11 +297,6 @@ ship_section_template = {
 		base = 0
 	}
 }
-
-
-
-
-
 
 ####################################################################################################################################################################
 ### MID1 ###########################################################################################################################################################
@@ -394,8 +383,6 @@ ship_section_template = {
 	}
 }
 
-
-
 ship_section_template = {
 	key = "BATTLECRUISER_MID1_P6M6"
 	ship_size = Battlecruiser
@@ -477,8 +464,6 @@ ship_section_template = {
 	}
 }
 
-
-
 ship_section_template = {
 	key = "BATTLECRUISER_MID1_M2L3"
 	ship_size = Battlecruiser
@@ -525,8 +510,6 @@ ship_section_template = {
 	}
 }
 
-
-
 ship_section_template = {
 	key = "BATTLECRUISER_MID1_G3L2"
 	ship_size = Battlecruiser
@@ -572,8 +555,6 @@ ship_section_template = {
 		base = 0
 	}
 }
-
-
 
 ship_section_template = {
 	key = "BATTLECRUISER_MID1_M9"
@@ -641,8 +622,6 @@ ship_section_template = {
 	}
 }
 
-
-
 ship_section_template = {
 	key = "BATTLECRUISER_MID1_G6"
 	ship_size = Battlecruiser
@@ -693,8 +672,6 @@ ship_section_template = {
 		base = 0
 	}
 }
-
-
 
 ship_section_template = {
 	key = "BATTLECRUISER_MID1_P4H3"
@@ -762,11 +739,6 @@ ship_section_template = {
 		base = 0
 	}
 }
-
-
-
-
-
 
 ####################################################################################################################################################################
 ### MID2 ###########################################################################################################################################################
@@ -853,8 +825,6 @@ ship_section_template = {
 	}
 }
 
-
-
 ship_section_template = {
 	key = "BATTLECRUISER_MID2_P6M6"
 	ship_size = Battlecruiser
@@ -935,8 +905,6 @@ ship_section_template = {
 		base = 0
 	}
 }
-
-
 
 ship_section_template = {
 	key = "BATTLECRUISER_MID2_M2L3"
@@ -1032,8 +1000,6 @@ ship_section_template = {
 	}
 }
 
-
-
 ship_section_template = {
 	key = "BATTLECRUISER_MID2_M9"
 	ship_size = Battlecruiser
@@ -1100,8 +1066,6 @@ ship_section_template = {
 	}
 }
 
-
-
 ship_section_template = {
 	key = "BATTLECRUISER_MID2_G6"
 	ship_size = Battlecruiser
@@ -1152,8 +1116,6 @@ ship_section_template = {
 		base = 0
 	}
 }
-
-
 
 ship_section_template = {
 	key = "BATTLECRUISER_MID2_P4H3"
@@ -1222,11 +1184,6 @@ ship_section_template = {
 	}
 }
 
-
-
-
-
-
 ####################################################################################################################################################################
 ### STERN ##########################################################################################################################################################
 ####################################################################################################################################################################
@@ -1292,8 +1249,6 @@ ship_section_template = {
 	}
 }
 
-
-
 ship_section_template = {
 	key = "BATTLECRUISER_STERN_G6"
 	ship_size = Battlecruiser
@@ -1344,8 +1299,6 @@ ship_section_template = {
 		base = 0
 	}
 }
-
-
 
 ship_section_template = {
 	key = "BATTLECRUISER_STERN_S8P8"

@@ -202,8 +202,6 @@ ship_section_template = {
 	}
 }
 
-
-
 ship_section_template = {
 	key = "BATTLESHIP_BOW_S5P5M5G5"
 	ship_size = battleship
@@ -1863,7 +1861,8 @@ ship_section_template = {
 	fits_on_slot = stern
 	entity = "battleship_stern_M2_entity"
 	icon = "GFX_ship_part_core_stern"
-
+	ai_tags = { gunship carrier }
+	
 	prerequisites = { "tech_nsc_disabled_sections" }
 	
 	component_slot = {
