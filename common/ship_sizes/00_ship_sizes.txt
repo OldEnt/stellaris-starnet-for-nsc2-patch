@@ -119,20 +119,18 @@ corvette = {
 
 	possible_construction = {
 		hidden_trigger = {
-			OR = {
-				is_ai = no
-				is_at_war = yes
+			owner = {
 				OR = {
-					OR = {
-						years_passed > 35
-						AND = {
-							years_passed > 19	# Prioritise constructors and expansion. Hotfix for AI spamming corvettes instead of civillian ships and starbases.
-							str_is_startech_loaded = no
-						}
-					}
+					is_ai = no
+					is_at_war = yes
+					years_passed > 35
 					AND = {
 						has_ai_expansion_plan = no
 						ai_colonize_plans = 0
+					}
+					AND = {
+						years_passed > 19						# Prioritise constructors and expansion. Hotfix for AI spamming corvettes instead of civillian ships and starbases.
+						str_is_startech_loaded = no
 					}
 				}
 			}
