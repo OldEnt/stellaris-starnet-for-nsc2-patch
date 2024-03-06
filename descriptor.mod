@@ -1,4 +1,4 @@
-version="3.7"
+version="3.11"
 tags={
 	"Gameplay"
 	"Overhaul"
@@ -11,9 +11,9 @@ tags={
 dependencies={
 	"~ StarNet AI"
 	"StarTech AI"
-	"(-NSC2 Season 7-)"
+	"((( NSC3 - Season 1 )))"
 }
-name="! Starnet for NSC2"
+name="! Starnet for NSC3"
 picture="thumbnails.png"
-supported_version="3.7.*"
+supported_version="3.11.*"
 remote_file_id="1720760712"

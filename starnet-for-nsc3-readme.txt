@@ -1,4 +1,4 @@
-[h1]Mod is for 3.4. Don't use with other versions of the game[/h1]
+[h1]Mod is for 3.11. Don't use with other versions of the game[/h1]
 
 This is a mod which intends to make my AI mod, [url=https://steamcommunity.com/sharedfiles/filedetails/?id=1712760331]Starnet AI[/url] work better with [url=steamcommunity.com/sharedfiles/filedetails/?id=683230077]NSC2[/url] (New Ship Classes and more). It also works with starnet's fork, [url=steamcommunity.com/sharedfiles/filedetails/?id=2494712590]Startech[/url].
 

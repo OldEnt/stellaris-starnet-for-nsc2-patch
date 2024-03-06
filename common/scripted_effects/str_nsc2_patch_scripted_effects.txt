@@ -1,12 +1,12 @@
 # Register ship_size for fleet composition settings.
 str_on_game_start_register_nsc2_ship_sizes = {
 	optimize_memory
-	str_register_ship_size = {
-		SHIP_SIZE = StrikeCruiser
-		MOD_NAME = nsc2
-		AI_SHIP_DATA_FACTOR = 25
-		SIZE_MULTIPLIER = 6
-	}
+	# str_register_ship_size = {
+	# 	SHIP_SIZE = StrikeCruiser
+	# 	MOD_NAME = nsc2
+	# 	AI_SHIP_DATA_FACTOR = 25
+	# 	SIZE_MULTIPLIER = 6
+	# }
 	# str_register_ship_size = {
 	# 	SHIP_SIZE = escortcarrier
 	# 	MOD_NAME = nsc2
@@ -17,13 +17,13 @@ str_on_game_start_register_nsc2_ship_sizes = {
 		SHIP_SIZE = Battlecruiser
 		MOD_NAME = nsc2
 		AI_SHIP_DATA_FACTOR = 25
-		SIZE_MULTIPLIER = 8
+		SIZE_MULTIPLIER = 6
 	}
 	str_register_ship_size = {
 		SHIP_SIZE = Carrier
 		MOD_NAME = nsc2
 		AI_SHIP_DATA_FACTOR = 25
-		SIZE_MULTIPLIER = 12
+		SIZE_MULTIPLIER = 10
 	}
 	str_register_ship_size = {
 		SHIP_SIZE = Dreadnought
@@ -31,12 +31,12 @@ str_on_game_start_register_nsc2_ship_sizes = {
 		AI_SHIP_DATA_FACTOR = 25
 		SIZE_MULTIPLIER = 14
 	}
-	str_register_ship_size = {
-		SHIP_SIZE = headquarters
-		MOD_NAME = nsc2
-		SIZE_MULTIPLIER = 50
-		AI_SHIP_DATA_MIN = 1
-		AI_SHIP_DATA_MAX = 1
-		LIMITS_BASE = 50
-	}
+	# str_register_ship_size = {
+	# 	SHIP_SIZE = headquarters
+	# 	MOD_NAME = nsc2
+	# 	SIZE_MULTIPLIER = 50
+	# 	AI_SHIP_DATA_MIN = 1
+	# 	AI_SHIP_DATA_MAX = 1
+	# 	LIMITS_BASE = 50
+	# }
 }
